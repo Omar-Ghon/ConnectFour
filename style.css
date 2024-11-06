@@ -1,0 +1,219 @@
+/* || RESET || */
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* || VARIABLES || */
+
+:root {
+    /* COLORS */
+    --TITLE-COLOR: #40E0D0;
+    --TITLE-BGCOLOR: black;
+    --TEXT-COLOR: black;
+    --CARD-BGCOLOR: #40E0D0;
+
+    /* BORDERS */
+    --TITLE-BORDER: 5px solid var(--TITLE-COLOR);
+    --CARD-BORDER: 10px solid #FFF;
+
+    /* SIZES */
+    --HEADER-SIZE: 4rem;
+}
+
+
+.title {
+    padding: 0.8rem;
+    min-width: 100vw;
+    text-align: center;
+    color: var(--TITLE-COLOR);
+    background-color: var(--TITLE-BGCOLOR);
+    font-size: var(--HEADER-SIZE);
+    border-bottom: var(--TITLE-BORDER);
+}
+
+.body--startingpage {
+    height: 100vh;
+    /* background-color: var(--TITLE-BGCOLOR); */
+    background-image: url('../img/space-trial.png');
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 15%;
+}
+
+.main--startingpage {
+    min-height: 80%;
+    padding: 1rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+}
+
+.players {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.card {
+    color: var(--TEXT-COLOR);
+    padding: 1rem;
+    background-color: var(--CARD-BGCOLOR);
+    border-radius: 10px;
+    border: var(--CARD-BORDER)
+}
+
+.player {
+    text-align: center;
+    font-size: 3rem;
+    padding: 0.8rem 0.5rem;
+}
+
+.playerName--input {
+    padding: 1rem 0.5rem;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    text-align: center;
+    border: none;
+    outline: none;
+}
+
+.planet {
+    padding: 1rem;
+    display: grid;
+    place-content: center;
+}
+
+.planet--img {
+    padding: 0.8rem 0;
+}
+
+.planet--caption {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.5rem 0;
+    width: 35%;
+    border-radius: 15px;
+    border: 1px solid #000;
+    background-color: whitesmoke;
+    text-align: center;
+}
+
+.btnStart--section {
+    display: grid;
+    place-content: center;
+}
+
+.btnStart {
+    font-size: 2rem;
+    border-radius: 30px;
+    padding: 1rem;
+    background-color: var(--CARD-BGCOLOR);
+    color: var(--TITLE-BGCOLOR);
+    border: var(--CARD-BORDER);
+}
+
+.btnStart:hover {
+    letter-spacing: 0.7px;
+    text-decoration: underline;
+    cursor: pointer;
+    transform: scale(1.2);
+    background-color: var(--TITLE-BGCOLOR);
+    color: var(--CARD-BGCOLOR);
+}
+
+.btnStart:hover .start--link {
+    color: var(--CARD-BGCOLOR);
+}
+
+.start--link, .start--link:visited {
+    text-decoration: none;
+    color: #000;
+}
+
+.game--title {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 1rem 1.5rem 0.7rem 1.5rem;
+    min-width: 100vw;
+    color: var(--TITLE-COLOR);
+    background-color: var(--TITLE-BGCOLOR);
+    font-size: 2rem;
+    border-bottom: var(--TITLE-BORDER);
+}
+
+.btnHelp:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.game--body {
+    height: 100vh;
+    background-image: url('../img/space-trial.png');
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 15%;
+}
+
+.game--main {
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.help--window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+  
+    background-color: black;
+    color: var(--CARD-BGCOLOR);
+    padding: 6rem;
+    border-radius: 5px;
+    border: var(--CARD-BORDER);
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+.help--title {
+    text-align: center;
+    font-size: 3.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: white;
+}
+
+.rules--list {
+    font-size: 2rem;
+}
+
+.rule:not(:first-child) {
+    padding-top: 1.3rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    z-index: 5;
+}
+
+.btnHelp {
+    border: none;
+    height: 65px;
+}
